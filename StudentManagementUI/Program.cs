@@ -1,4 +1,5 @@
 using StudentManagementUI.Forms.BaseForms;
+using StudentManagementUI.Forms.SchoolForms;
 
 namespace StudentManagementUI
 {
@@ -10,7 +11,7 @@ namespace StudentManagementUI
         {
 
             ApplicationConfiguration.Initialize();
-            Application.Run(new BaseEditForm());
+            Application.Run(new SchoolListForm());
         }
     }
 }

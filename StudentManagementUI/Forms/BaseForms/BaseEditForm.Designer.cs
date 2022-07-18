@@ -73,7 +73,7 @@
             this.ribbonControl.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
             this.ribbonControl.ShowQatLocationSelector = false;
             this.ribbonControl.ShowToolbarCustomizeItem = false;
-            this.ribbonControl.Size = new System.Drawing.Size(550, 109);
+            this.ribbonControl.Size = new System.Drawing.Size(498, 109);
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
@@ -165,16 +165,16 @@
             this.ribbonStatusBar.ItemLinks.Add(this.statusBarDescription);
             this.ribbonStatusBar.ItemLinks.Add(this.statusBarShortcut);
             this.ribbonStatusBar.ItemLinks.Add(this.statusBarShortcutDescription);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 503);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 375);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(550, 24);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(498, 24);
             // 
             // BaseEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 527);
+            this.ClientSize = new System.Drawing.Size(498, 399);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbonControl);
             this.IconOptions.ShowIcon = false;
