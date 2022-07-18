@@ -13,9 +13,9 @@ namespace Business.Abstract
     {
         IDataResult<List<School>> GetAll();
         IDataResult<School> Get(int schoolId);
-        IDataResult<SchoolDetailDto> GetSchoolDetailDto();
-        IDataResult<SchoolDetailDto> GetSchoolDetailDtoActive();
-        IDataResult<SchoolDetailDto> GetSchoolDetailDtoPassive();
+        IDataResult<List<SchoolDetailDto>> GetSchoolDetailDto();
+        IDataResult<List<SchoolDetailDto>> GetSchoolDetailDtoActive();
+        IDataResult<List<SchoolDetailDto>> GetSchoolDetailDtoPassive();
         IResult Add(School school);
         IResult Update(School school);
         IResult Delete(School school);

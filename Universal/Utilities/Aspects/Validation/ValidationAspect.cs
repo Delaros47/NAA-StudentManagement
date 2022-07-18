@@ -1,8 +1,12 @@
-﻿using System;
+﻿using Castle.DynamicProxy;
+using FluentValidation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Universal.CrossCuttingConcerns.Validation;
+using Universal.Utilities.Interceptors;
 
 namespace Universal.Utilities.Aspects.Validation
 {

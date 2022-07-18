@@ -1,5 +1,6 @@
 ﻿using Business.Abstract;
 using Business.Constants;
+using Business.ValidationRules.FluentValidation;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using Entities.DTOs;
@@ -8,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Universal.Utilities.Aspects.Validation;
 using Universal.Utilities.Results.Abstract;
 using Universal.Utilities.Results.Concrete;
 
@@ -21,6 +23,7 @@ namespace Business.Concrete
             _schoolDal = schoolDal;
         }
 
+        [ValidationAspect(typeof(SchoolValidator))]
         public IResult Add(School school)
         {
             _schoolDal.Add(school);
@@ -43,19 +46,19 @@ namespace Business.Concrete
             return new SuccessDataResult<List<School>>(_schoolDal.GetAll());
         }
 
-        public IDataResult<SchoolDetailDto> GetSchoolDetailDto()
+        public IDataResult<List<SchoolDetailDto>> GetSchoolDetailDto()
         {
-            throw new NotImplementedException();
+            return new SuccessDataResult<List<SchoolDetailDto>>(_schoolDal.GetSchoolDetailDto());
         }
 
-        public IDataResult<SchoolDetailDto> GetSchoolDetailDtoActive()
+        public IDataResult<List<SchoolDetailDto>> GetSchoolDetailDtoActive()
         {
-            throw new NotImplementedException();
+            return new SuccessDataResult<List<SchoolDetailDto>>(_schoolDal.GetSchoolDetailDto().Where(s=>s.State==true).ToList());
         }
 
-        public IDataResult<SchoolDetailDto> GetSchoolDetailDtoPassive()
+        public IDataResult<List<SchoolDetailDto>> GetSchoolDetailDtoPassive()
         {
-            throw new NotImplementedException();
+            return new SuccessDataResult<List<SchoolDetailDto>>(_schoolDal.GetSchoolDetailDto().Where(s => s.State == false).ToList());
         }
 
         public IResult Update(School school)

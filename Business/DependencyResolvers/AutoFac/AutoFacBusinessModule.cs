@@ -1,6 +1,10 @@
 ﻿using Autofac;
 using Autofac.Extras.DynamicProxy;
+using Business.Abstract;
+using Business.Concrete;
 using Castle.DynamicProxy;
+using DataAccess.Abstract;
+using DataAccess.Concrete.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +19,8 @@ namespace Business.DependencyResolvers.AutoFac
         protected override void Load(ContainerBuilder builder)
         {
 
+            builder.RegisterType<SchoolManager>().As<ISchoolService>().SingleInstance();
+            builder.RegisterType<EfSchoolDal>().As<ISchoolDal>().SingleInstance();
 
 
 
