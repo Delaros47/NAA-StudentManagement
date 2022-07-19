@@ -1,4 +1,7 @@
-﻿using DevExpress.XtraEditors;
+﻿using Business.Abstract;
+using Business.Concrete;
+using DataAccess.Concrete.EntityFramework;
+using DevExpress.XtraEditors;
 using StudentManagementUI.Forms.BaseForms;
 using System;
 using System.Collections.Generic;
