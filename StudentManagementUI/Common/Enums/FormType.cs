@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StudentManagementUI.Enums
+namespace StudentManagementUI.Common.Enums
 {
     public enum FormType:byte
     {

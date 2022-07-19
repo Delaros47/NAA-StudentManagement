@@ -1,6 +1,6 @@
 ﻿using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
-using StudentManagementUI.Enums;
+using StudentManagementUI.Common.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

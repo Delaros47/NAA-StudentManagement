@@ -1,5 +1,9 @@
 ﻿using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
+using DevExpress.XtraGrid.Views.Grid;
+using StudentManagementUI.Common.Enums;
+using StudentManagementUI.Common.Functions;
+using StudentManagementUI.Common.Show.Abstract;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +18,9 @@ namespace StudentManagementUI.Forms.BaseForms
 {
     public partial class BaseListForm : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        protected IBaseFormShow _baseFormShow;
+        protected FormType _formType;
+        protected internal GridView _gridView;
         public BaseListForm()
         {
             InitializeComponent();
@@ -41,6 +48,11 @@ namespace StudentManagementUI.Forms.BaseForms
         }
 
         private void ShowEditForm(int id)
+        {
+            var result = _baseFormShow.ShowDialogEditForm(_formType,id);
+        }
+
+        private void EntityDelete()
         {
             
         }
@@ -81,6 +93,14 @@ namespace StudentManagementUI.Forms.BaseForms
             else if (e.Item==btnNew)
             {
                 ShowEditForm(-1);
+            }
+            else if (e.Item==btnEdit)
+            {
+                ShowEditForm(_gridView.GetRowId());
+            }
+            else if (e.Item==btnDelete)
+            {
+                EntityDelete();
             }
             
         }

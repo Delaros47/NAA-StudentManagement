@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StudentManagementUI.Show
+namespace StudentManagementUI.Common.Show
 {
     public class ShowListForms<TForm> where TForm : BaseListForm
     {
