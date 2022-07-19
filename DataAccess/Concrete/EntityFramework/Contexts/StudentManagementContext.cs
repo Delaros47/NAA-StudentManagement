@@ -12,7 +12,7 @@ namespace DataAccess.Concrete.EntityFramework.Contexts
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Source=DESKTOP-QI6H2EA;Initial Catalog=StudentManagementNAADb;Integrated Security=True;");
+            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-QI6H2EA;Initial Catalog=StudentManagementNAADb;Integrated Security=True;");
         }
 
         public DbSet<School> Schools { get; set; }

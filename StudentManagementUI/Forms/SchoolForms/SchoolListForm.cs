@@ -17,9 +17,16 @@ namespace StudentManagementUI.Forms.SchoolForms
 {
     public partial class SchoolListForm : BaseListForm
     {
+        private readonly ISchoolService _schoolService;
         public SchoolListForm()
         {
             InitializeComponent();
+            _schoolService = new SchoolManager(new EfSchoolDal());
+        }
+
+        private void SchoolListForm_Load(object sender, EventArgs e)
+        {
+            gridControlSchools.DataSource = _schoolService.GetSchoolDetailDtoActive().Data;
         }
     }
 }
