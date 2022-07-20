@@ -52,6 +52,11 @@ namespace Business.Concrete
             return new SuccessDataResult<List<District>>(_districtDal.GetAll(d => d.State == false));
         }
 
+        public IDataResult<District> GetLastPrivateCode()
+        {
+            return new SuccessDataResult<District>(_districtDal.GetAll().Last());
+        }
+
         public IResult Update(District district)
         {
             _districtDal.Update(district);

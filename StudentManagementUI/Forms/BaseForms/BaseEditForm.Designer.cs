@@ -32,8 +32,8 @@
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnNew = new DevExpress.XtraBars.BarButtonItem();
             this.btnSave = new DevExpress.XtraBars.BarButtonItem();
-            this.btnUndo = new DevExpress.XtraBars.BarButtonItem();
-            this.btnDelete = new DevExpress.XtraBars.BarButtonItem();
+            this.btnUpdate = new DevExpress.XtraBars.BarButtonItem();
+            this.btnClear = new DevExpress.XtraBars.BarButtonItem();
             this.btnExit = new DevExpress.XtraBars.BarButtonItem();
             this.statusBarDescription = new DevExpress.XtraBars.BarStaticItem();
             this.statusBarShortcut = new DevExpress.XtraBars.BarStaticItem();
@@ -54,8 +54,8 @@
             this.ribbonControl.SearchEditItem,
             this.btnNew,
             this.btnSave,
-            this.btnUndo,
-            this.btnDelete,
+            this.btnUpdate,
+            this.btnClear,
             this.btnExit,
             this.statusBarDescription,
             this.statusBarShortcut,
@@ -86,6 +86,7 @@
             this.btnNew.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnNew.ImageOptions.LargeImage")));
             this.btnNew.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Insert));
             this.btnNew.Name = "btnNew";
+            this.btnNew.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.New);
             // 
             // btnSave
             // 
@@ -95,24 +96,27 @@
             this.btnSave.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.LargeImage")));
             this.btnSave.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F2);
             this.btnSave.Name = "btnSave";
+            this.btnSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Save);
             // 
-            // btnUndo
+            // btnUpdate
             // 
-            this.btnUndo.Caption = "Undo";
-            this.btnUndo.Id = 3;
-            this.btnUndo.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUndo.ImageOptions.Image")));
-            this.btnUndo.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnUndo.ImageOptions.LargeImage")));
-            this.btnUndo.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z));
-            this.btnUndo.Name = "btnUndo";
+            this.btnUpdate.Caption = "Update";
+            this.btnUpdate.Id = 3;
+            this.btnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUndo.ImageOptions.Image")));
+            this.btnUpdate.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnUndo.ImageOptions.LargeImage")));
+            this.btnUpdate.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U));
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Update);
             // 
-            // btnDelete
+            // btnClear
             // 
-            this.btnDelete.Caption = "Delete";
-            this.btnDelete.Id = 4;
-            this.btnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.Image")));
-            this.btnDelete.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.LargeImage")));
-            this.btnDelete.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Delete));
-            this.btnDelete.Name = "btnDelete";
+            this.btnClear.Caption = "Clear";
+            this.btnClear.Id = 4;
+            this.btnClear.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.Image")));
+            this.btnClear.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.LargeImage")));
+            this.btnClear.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Delete));
+            this.btnClear.Name = "btnClear";
+            this.btnClear.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Clear);
             // 
             // btnExit
             // 
@@ -122,6 +126,7 @@
             this.btnExit.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnExit.ImageOptions.LargeImage")));
             this.btnExit.Name = "btnExit";
             this.btnExit.ShortcutKeyDisplayString = "Esc";
+            this.btnExit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Exit);
             // 
             // statusBarDescription
             // 
@@ -154,8 +159,8 @@
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.btnNew);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnSave);
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnUndo);
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnDelete);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnUpdate);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnClear);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnExit);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "ribbonPageGroup1";
@@ -195,8 +200,8 @@
         protected DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl;
         private DevExpress.XtraBars.BarButtonItem btnNew;
         private DevExpress.XtraBars.BarButtonItem btnSave;
-        private DevExpress.XtraBars.BarButtonItem btnUndo;
-        private DevExpress.XtraBars.BarButtonItem btnDelete;
+        private DevExpress.XtraBars.BarButtonItem btnUpdate;
+        private DevExpress.XtraBars.BarButtonItem btnClear;
         private DevExpress.XtraBars.BarButtonItem btnExit;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
         protected DevExpress.XtraBars.BarStaticItem statusBarDescription;

@@ -46,6 +46,11 @@ namespace Business.Concrete
             return new SuccessDataResult<List<School>>(_schoolDal.GetAll());
         }
 
+        public IDataResult<School> GetLastPrivateCode()
+        {
+            return new SuccessDataResult<School>(_schoolDal.GetAll().Last());
+        }
+
         public IDataResult<List<SchoolDetailDto>> GetSchoolDetailDto()
         {
             return new SuccessDataResult<List<SchoolDetailDto>>(_schoolDal.GetSchoolDetailDto());

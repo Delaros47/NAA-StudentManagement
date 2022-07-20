@@ -146,6 +146,7 @@
             this.btnNew.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnNew.ImageOptions.LargeImage")));
             this.btnNew.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Insert);
             this.btnNew.Name = "btnNew";
+            this.btnNew.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.New);
             // 
             // btnDelete
             // 
@@ -155,6 +156,7 @@
             this.btnDelete.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.LargeImage")));
             this.btnDelete.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Delete);
             this.btnDelete.Name = "btnDelete";
+            this.btnDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Delete);
             // 
             // btnSelect
             // 
@@ -164,6 +166,7 @@
             this.btnSelect.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnSelect.ImageOptions.LargeImage")));
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.ShortcutKeyDisplayString = "Enter";
+            this.btnSelect.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Select);
             // 
             // btnEdit
             // 
@@ -173,6 +176,7 @@
             this.btnEdit.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnEdit.ImageOptions.LargeImage")));
             this.btnEdit.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F3);
             this.btnEdit.Name = "btnEdit";
+            this.btnEdit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Edit);
             // 
             // btnRefresh
             // 
@@ -182,6 +186,7 @@
             this.btnRefresh.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnRefresh.ImageOptions.LargeImage")));
             this.btnRefresh.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F5);
             this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Refresh);
             // 
             // btnFilter
             // 
@@ -191,6 +196,7 @@
             this.btnFilter.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnFilter.ImageOptions.LargeImage")));
             this.btnFilter.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F8);
             this.btnFilter.Name = "btnFilter";
+            this.btnFilter.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Filter);
             // 
             // btnColumns
             // 
@@ -200,6 +206,7 @@
             this.btnColumns.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnColumns.ImageOptions.LargeImage")));
             this.btnColumns.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O));
             this.btnColumns.Name = "btnColumns";
+            this.btnColumns.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Columns);
             // 
             // btnPrint
             // 
@@ -209,6 +216,7 @@
             this.btnPrint.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPrint.ImageOptions.LargeImage")));
             this.btnPrint.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P));
             this.btnPrint.Name = "btnPrint";
+            this.btnPrint.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Print);
             // 
             // btnSend
             // 
@@ -244,6 +252,7 @@
             this.btnExcelFileStandard.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnExcelFileStandard.ImageOptions.LargeImage")));
             this.btnExcelFileStandard.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G), (System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S));
             this.btnExcelFileStandard.Name = "btnExcelFileStandard";
+            this.btnExcelFileStandard.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ExcelFileStandard);
             // 
             // btnExcelFileFormatted
             // 
@@ -253,6 +262,7 @@
             this.btnExcelFileFormatted.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnExcelFileFormatted.ImageOptions.LargeImage")));
             this.btnExcelFileFormatted.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G), (System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F));
             this.btnExcelFileFormatted.Name = "btnExcelFileFormatted";
+            this.btnExcelFileFormatted.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ExcelFileFormatted);
             // 
             // btnExcelFileUnFormatted
             // 
@@ -262,6 +272,7 @@
             this.btnExcelFileUnFormatted.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnExcelFileUnFormatted.ImageOptions.LargeImage")));
             this.btnExcelFileUnFormatted.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G), (System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U));
             this.btnExcelFileUnFormatted.Name = "btnExcelFileUnFormatted";
+            this.btnExcelFileUnFormatted.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ExcelFileUnFormatted);
             // 
             // btnWordFile
             // 
@@ -271,6 +282,7 @@
             this.btnWordFile.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnWordFile.ImageOptions.LargeImage")));
             this.btnWordFile.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G), (System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W));
             this.btnWordFile.Name = "btnWordFile";
+            this.btnWordFile.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.WordFile);
             // 
             // btnPdfFile
             // 
@@ -280,6 +292,7 @@
             this.btnPdfFile.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPdfFile.ImageOptions.LargeImage")));
             this.btnPdfFile.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G), (System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P));
             this.btnPdfFile.Name = "btnPdfFile";
+            this.btnPdfFile.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.PdfFile);
             // 
             // btnTxtFile
             // 
@@ -289,6 +302,7 @@
             this.btnTxtFile.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTxtFile.ImageOptions.LargeImage")));
             this.btnTxtFile.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G), (System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T));
             this.btnTxtFile.Name = "btnTxtFile";
+            this.btnTxtFile.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.TextFile);
             // 
             // btnExit
             // 
@@ -298,6 +312,7 @@
             this.btnExit.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnExit.ImageOptions.LargeImage")));
             this.btnExit.Name = "btnExit";
             this.btnExit.ShortcutKeyDisplayString = "Esc";
+            this.btnExit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Exit);
             // 
             // barNew
             // 
@@ -479,6 +494,7 @@
             this.btnActivePassiveList.ItemAppearance.Pressed.Options.UseFont = true;
             this.btnActivePassiveList.ItemAppearance.Pressed.Options.UseForeColor = true;
             this.btnActivePassiveList.Name = "btnActivePassiveList";
+            this.btnActivePassiveList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ActivePassiveList);
             // 
             // ribbonPage
             // 
@@ -525,10 +541,10 @@
             this.ribbonStatusBar.ItemLinks.Add(this.barExit, true);
             this.ribbonStatusBar.ItemLinks.Add(this.barExitDescription);
             this.ribbonStatusBar.ItemLinks.Add(this.btnActivePassiveList);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 377);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 375);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1190, 22);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1190, 24);
             // 
             // BaseListForm
             // 

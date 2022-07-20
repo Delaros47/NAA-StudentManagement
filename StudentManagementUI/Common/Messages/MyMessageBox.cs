@@ -14,6 +14,11 @@ namespace StudentManagementUI.Common.Messages
             XtraMessageBox.Show(errorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
+        public static void AddMessage(string message)
+        {
+            XtraMessageBox.Show(message, "Adding a new", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
         public static void WarningMessage(string warningMessage)
         {
             XtraMessageBox.Show(warningMessage, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);

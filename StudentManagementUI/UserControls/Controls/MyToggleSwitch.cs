@@ -26,10 +26,11 @@ namespace StudentManagementUI.UserControls.Controls
             //Here HorzAlignment Far means that Passive and Active text will be left side of the ToggleSwitch
             Properties.GlyphAlignment = HorzAlignment.Far;
             Properties.Appearance.ForeColor = Color.Maroon;
+            //This is whenever we open our form that ToggleSwitch will always be on
+            IsOn = true;
         }
 
         public override bool EnterMoveNextControl { get; set; } = true;
-
         public string StatusBarDescription { get; set; } = "Choose the state of your form";
     }
 }

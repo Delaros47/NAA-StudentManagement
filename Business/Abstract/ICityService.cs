@@ -14,6 +14,7 @@ namespace Business.Abstract
         IDataResult<City> Get(int cityId);
         IDataResult<List<City>> GetAllActive();
         IDataResult<List<City>> GetAllPassive();
+        IDataResult<City> GetLastPrivateCode();
         IResult Add(City city);
         IResult Update(City city);
         IResult Delete(City city);

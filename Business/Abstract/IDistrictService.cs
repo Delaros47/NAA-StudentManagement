@@ -14,6 +14,7 @@ namespace Business.Abstract
         IDataResult<District> Get(int districtId);
         IDataResult<List<District>> GetAllActive();
         IDataResult<List<District>> GetAllPassive();
+        IDataResult<District> GetLastPrivateCode();
         IResult Add(District district);
         IResult Update(District district);
         IResult Delete(District district);

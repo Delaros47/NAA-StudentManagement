@@ -1,6 +1,5 @@
 ﻿using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
-using StudentManagementUI.Common.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,15 +14,33 @@ namespace StudentManagementUI.Forms.BaseForms
 {
     public partial class BaseEditForm : RibbonForm
     {
-        protected internal ProcessType _processType;
-        protected internal int _id;
-        protected internal bool WillItRefreshed;
+
         public BaseEditForm()
         {
             InitializeComponent();
         }
 
-        protected internal void MyLoad()
+        protected virtual void New(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        protected virtual void Save(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        protected virtual void Update(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        protected virtual void Clear(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        protected virtual void Exit(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
         }

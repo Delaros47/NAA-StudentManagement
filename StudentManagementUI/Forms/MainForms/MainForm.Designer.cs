@@ -36,6 +36,7 @@
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.defaultLookAndFeel = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.xtraTabbedMdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.btnCities = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
             this.SuspendLayout();
@@ -46,9 +47,10 @@
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbon.ExpandCollapseItem,
             this.ribbon.SearchEditItem,
-            this.btnSchools});
+            this.btnSchools,
+            this.btnCities});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 2;
+            this.ribbon.MaxItemId = 3;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPageStudents});
@@ -71,6 +73,7 @@
             // ribbonPageGroup
             // 
             this.ribbonPageGroup.ItemLinks.Add(this.btnSchools);
+            this.ribbonPageGroup.ItemLinks.Add(this.btnCities);
             this.ribbonPageGroup.Name = "ribbonPageGroup";
             // 
             // ribbonStatusBar
@@ -83,6 +86,12 @@
             // xtraTabbedMdiManager
             // 
             this.xtraTabbedMdiManager.MdiParent = this;
+            // 
+            // btnCities
+            // 
+            this.btnCities.Caption = "Cities";
+            this.btnCities.Id = 2;
+            this.btnCities.Name = "btnCities";
             // 
             // MainForm
             // 
@@ -113,5 +122,6 @@
         private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel;
         private DevExpress.XtraBars.BarButtonItem btnSchools;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager;
+        private DevExpress.XtraBars.BarButtonItem btnCities;
     }
 }

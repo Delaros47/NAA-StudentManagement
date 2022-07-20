@@ -14,6 +14,7 @@ namespace StudentManagementUI.Forms.SchoolForms
 {
     public partial class SchoolEditForm : BaseEditForm
     {
+        
         public SchoolEditForm()
         {
             InitializeComponent();
