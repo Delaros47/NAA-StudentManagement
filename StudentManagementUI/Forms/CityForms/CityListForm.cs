@@ -23,11 +23,13 @@ namespace StudentManagementUI.Forms.CityForms
         {
             InitializeComponent();
             _cityService = InstanceFactory.GetInstance<ICityService>();
+            longNavigator.controlNavigator.NavigatableControl = gridControlCities;
         }
 
         protected override void New(object sender, ItemClickEventArgs e)
         {
             CreateForms<CityEditForm>.ShowDialogEditForm();
+            GetAll();
         }
 
         protected override void Delete(object sender, ItemClickEventArgs e)
@@ -42,12 +44,14 @@ namespace StudentManagementUI.Forms.CityForms
 
         protected override void Edit(object sender, ItemClickEventArgs e)
         {
-
+            CityEditForm.CityId = (int)gridViewCities.GetFocusedRowCellValue("Id");
+            CreateForms<CityEditForm>.ShowDialogEditForm();
+            GetAll();
         }
 
         protected override void Refresh(object sender, ItemClickEventArgs e)
         {
-           
+            GetAll();
         }
 
         protected override void Filter(object sender, ItemClickEventArgs e)
@@ -110,6 +114,24 @@ namespace StudentManagementUI.Forms.CityForms
                 default:
                     break;
             }
+        }
+
+        private void CityListForm_Load(object sender, EventArgs e)
+        {
+            GetAll();
+        }
+
+        private void GetAll()
+        {
+            gridControlCities.DataSource = _cityService.GetAllActive().Data;
+        }
+        
+
+        private void gridViewCities_DoubleClick(object sender, EventArgs e)
+        {
+            CityEditForm.CityId = (int)gridViewCities.GetFocusedRowCellValue("Id");
+            CreateForms<CityEditForm>.ShowDialogEditForm();
+            GetAll();
         }
     }
 }

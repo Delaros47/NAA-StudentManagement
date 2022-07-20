@@ -109,6 +109,7 @@
             this.gridViewCities.StatusBarShortcut = null;
             this.gridViewCities.StatusBarShortcutDescription = null;
             this.gridViewCities.ViewCaption = "Cities";
+            this.gridViewCities.DoubleClick += new System.EventHandler(this.gridViewCities_DoubleClick);
             // 
             // colId
             // 
@@ -172,6 +173,7 @@
             this.IconOptions.ShowIcon = false;
             this.Name = "CityListForm";
             this.Text = "City List";
+            this.Load += new System.EventHandler(this.CityListForm_Load);
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.longNavigator, 0);
             this.Controls.SetChildIndex(this.gridControlCities, 0);

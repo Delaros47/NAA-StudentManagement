@@ -30,8 +30,23 @@ namespace StudentManagementUI.Forms.CityForms
 
         protected override void New(object sender, ItemClickEventArgs e)
         {
+            GetPrivateCode();
+        }
+
+        private void GetPrivateCode()
+        {
             CleanAll();
-            GeneratePrivateCodes.GeneratePrivate();
+            try
+            {
+                var result = _cityService.GetLastPrivateCode().Data;
+                txtPrivateCode.Text = GeneratePrivateCodes.GeneratePrivate(result.PrivateCode);
+            }
+            catch (Exception exception)
+            {
+                MyMessageBox.UnassignPrivateCode();
+            }
+
+
         }
 
         protected override void Save(object sender, ItemClickEventArgs e)
@@ -57,10 +72,12 @@ namespace StudentManagementUI.Forms.CityForms
         private void CleanAll()
         {
             ClearAll.Clean(myDataLayoutControl);
+            GetPrivateCode();
         }
 
         protected override void Update(object sender, ItemClickEventArgs e)
         {
+            if (CityId == -1) return;
             var result = _cityService.Add(new City
             {
                 Id = CityId,
@@ -92,7 +109,20 @@ namespace StudentManagementUI.Forms.CityForms
 
         private void CityEditForm_Load(object sender, EventArgs e)
         {
-
+            if (CityId != -1)
+            {
+                var result = _cityService.Get(CityId).Data;
+                if (result != null)
+                {
+                    txtPrivateCode.Text = result.PrivateCode;
+                    txtCityName.Text = result.CityName;
+                    txtDescription.Text = result.Description;
+                }
+            }
+            else
+            {
+                GetPrivateCode();
+            }
         }
     }
 }

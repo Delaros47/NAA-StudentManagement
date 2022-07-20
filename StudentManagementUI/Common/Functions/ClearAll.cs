@@ -13,9 +13,13 @@ namespace StudentManagementUI.Common.Functions
         {
             foreach (Control ctrl in dataLayoutControl.Controls)
             {
-                BaseEdit editor = ctrl as BaseEdit;
-                if (editor != null)
-                    editor.EditValue = null;
+                if (ctrl.Name!="tglState")
+                {
+                    BaseEdit editor = ctrl as BaseEdit;
+                    if (editor != null)
+                        editor.EditValue = null;
+                }
+                
             }
         }
     }

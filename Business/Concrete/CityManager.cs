@@ -54,7 +54,7 @@ namespace Business.Concrete
 
         public IDataResult<City> GetLastPrivateCode()
         {
-            return new SuccessDataResult<City>(_cityDal.GetAll().Last());
+            return new SuccessDataResult<City>(_cityDal.GetAll().Last(),Messages.ValidPrivateCode);
         }
 
         public IResult Update(City city)

@@ -43,5 +43,10 @@ namespace StudentManagementUI.Common.Messages
         {
             WarningMessage("Please choose the proper row on the table");
         }
+
+        public static void UnassignPrivateCode()
+        {
+            XtraMessageBox.Show("Unassigned Private Code please enter the first Private Code manually", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
     }
 }

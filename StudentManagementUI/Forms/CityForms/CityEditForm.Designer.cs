@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraLayout.ColumnDefinition columnDefinition4 = new DevExpress.XtraLayout.ColumnDefinition();
-            DevExpress.XtraLayout.ColumnDefinition columnDefinition5 = new DevExpress.XtraLayout.ColumnDefinition();
-            DevExpress.XtraLayout.ColumnDefinition columnDefinition6 = new DevExpress.XtraLayout.ColumnDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition4 = new DevExpress.XtraLayout.RowDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition5 = new DevExpress.XtraLayout.RowDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition6 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition1 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition2 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition3 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition1 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition2 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition3 = new DevExpress.XtraLayout.RowDefinition();
             this.myDataLayoutControl = new StudentManagementUI.UserControls.Controls.MyDataLayoutControl();
             this.txtDescription = new StudentManagementUI.UserControls.Controls.MyMemoEdit();
             this.txtCityName = new StudentManagementUI.UserControls.Controls.MyTextEdit();
@@ -84,36 +84,36 @@
             this.myDataLayoutControl.OptionsFocus.EnableAutoTabOrder = false;
             this.myDataLayoutControl.Root = this.Root;
             this.myDataLayoutControl.Size = new System.Drawing.Size(373, 136);
-            this.myDataLayoutControl.TabIndex = 2;
+            this.myDataLayoutControl.TabIndex = 0;
             this.myDataLayoutControl.Text = "myDataLayoutControl1";
             // 
             // txtDescription
             // 
             this.txtDescription.EnterMoveNextControl = true;
-            this.txtDescription.Location = new System.Drawing.Point(86, 60);
+            this.txtDescription.Location = new System.Drawing.Point(84, 60);
             this.txtDescription.MenuManager = this.ribbonControl;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtDescription.Properties.MaxLength = 500;
-            this.txtDescription.Size = new System.Drawing.Size(275, 64);
+            this.txtDescription.Size = new System.Drawing.Size(277, 64);
             this.txtDescription.StatusBarDescription = "Enter the Description.";
             this.txtDescription.StyleController = this.myDataLayoutControl;
-            this.txtDescription.TabIndex = 7;
+            this.txtDescription.TabIndex = 1;
             // 
             // txtCityName
             // 
             this.txtCityName.EnterMoveNextControl = true;
-            this.txtCityName.Location = new System.Drawing.Point(86, 36);
+            this.txtCityName.Location = new System.Drawing.Point(84, 36);
             this.txtCityName.MenuManager = this.ribbonControl;
             this.txtCityName.Name = "txtCityName";
             this.txtCityName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtCityName.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtCityName.Properties.MaxLength = 50;
-            this.txtCityName.Size = new System.Drawing.Size(132, 20);
+            this.txtCityName.Size = new System.Drawing.Size(134, 20);
             this.txtCityName.StatusBarDescription = null;
             this.txtCityName.StyleController = this.myDataLayoutControl;
-            this.txtCityName.TabIndex = 6;
+            this.txtCityName.TabIndex = 0;
             // 
             // tglState
             // 
@@ -132,12 +132,12 @@
             this.tglState.Size = new System.Drawing.Size(89, 20);
             this.tglState.StatusBarDescription = "Choose the state of your form";
             this.tglState.StyleController = this.myDataLayoutControl;
-            this.tglState.TabIndex = 5;
+            this.tglState.TabIndex = 2;
             // 
             // txtPrivateCode
             // 
             this.txtPrivateCode.EnterMoveNextControl = true;
-            this.txtPrivateCode.Location = new System.Drawing.Point(86, 12);
+            this.txtPrivateCode.Location = new System.Drawing.Point(84, 12);
             this.txtPrivateCode.MenuManager = this.ribbonControl;
             this.txtPrivateCode.Name = "txtPrivateCode";
             this.txtPrivateCode.Properties.Appearance.BackColor = System.Drawing.Color.PaleGoldenrod;
@@ -147,10 +147,10 @@
             this.txtPrivateCode.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtPrivateCode.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtPrivateCode.Properties.MaxLength = 35;
-            this.txtPrivateCode.Size = new System.Drawing.Size(132, 20);
+            this.txtPrivateCode.Size = new System.Drawing.Size(134, 20);
             this.txtPrivateCode.StatusBarDescription = "Enter the Private Code.";
             this.txtPrivateCode.StyleController = this.myDataLayoutControl;
-            this.txtPrivateCode.TabIndex = 4;
+            this.txtPrivateCode.TabIndex = 3;
             // 
             // Root
             // 
@@ -163,26 +163,26 @@
             this.layoutControlItem4});
             this.Root.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
             this.Root.Name = "Root";
-            columnDefinition4.SizeType = System.Windows.Forms.SizeType.Absolute;
-            columnDefinition4.Width = 210D;
-            columnDefinition5.SizeType = System.Windows.Forms.SizeType.Percent;
-            columnDefinition5.Width = 100D;
-            columnDefinition6.SizeType = System.Windows.Forms.SizeType.Absolute;
-            columnDefinition6.Width = 92D;
+            columnDefinition1.SizeType = System.Windows.Forms.SizeType.Absolute;
+            columnDefinition1.Width = 210D;
+            columnDefinition2.SizeType = System.Windows.Forms.SizeType.Percent;
+            columnDefinition2.Width = 100D;
+            columnDefinition3.SizeType = System.Windows.Forms.SizeType.Absolute;
+            columnDefinition3.Width = 92D;
             this.Root.OptionsTableLayoutGroup.ColumnDefinitions.AddRange(new DevExpress.XtraLayout.ColumnDefinition[] {
-            columnDefinition4,
-            columnDefinition5,
-            columnDefinition6});
-            rowDefinition4.Height = 24D;
-            rowDefinition4.SizeType = System.Windows.Forms.SizeType.Absolute;
-            rowDefinition5.Height = 24D;
-            rowDefinition5.SizeType = System.Windows.Forms.SizeType.Absolute;
-            rowDefinition6.Height = 100D;
-            rowDefinition6.SizeType = System.Windows.Forms.SizeType.Percent;
+            columnDefinition1,
+            columnDefinition2,
+            columnDefinition3});
+            rowDefinition1.Height = 24D;
+            rowDefinition1.SizeType = System.Windows.Forms.SizeType.Absolute;
+            rowDefinition2.Height = 24D;
+            rowDefinition2.SizeType = System.Windows.Forms.SizeType.Absolute;
+            rowDefinition3.Height = 100D;
+            rowDefinition3.SizeType = System.Windows.Forms.SizeType.Percent;
             this.Root.OptionsTableLayoutGroup.RowDefinitions.AddRange(new DevExpress.XtraLayout.RowDefinition[] {
-            rowDefinition4,
-            rowDefinition5,
-            rowDefinition6});
+            rowDefinition1,
+            rowDefinition2,
+            rowDefinition3});
             this.Root.Size = new System.Drawing.Size(373, 136);
             this.Root.TextVisible = false;
             // 
@@ -195,7 +195,9 @@
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(210, 24);
             this.layoutControlItem1.Text = "Private Code";
+            this.layoutControlItem1.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(62, 13);
+            this.layoutControlItem1.TextToControlDistance = 10;
             // 
             // layoutControlItem2
             // 
@@ -219,7 +221,9 @@
             this.layoutControlItem3.OptionsTableLayoutItem.RowIndex = 1;
             this.layoutControlItem3.Size = new System.Drawing.Size(210, 24);
             this.layoutControlItem3.Text = "City Name";
+            this.layoutControlItem3.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem3.TextSize = new System.Drawing.Size(62, 13);
+            this.layoutControlItem3.TextToControlDistance = 10;
             // 
             // layoutControlItem4
             // 
@@ -232,7 +236,9 @@
             this.layoutControlItem4.OptionsTableLayoutItem.RowIndex = 2;
             this.layoutControlItem4.Size = new System.Drawing.Size(353, 68);
             this.layoutControlItem4.Text = "Description";
+            this.layoutControlItem4.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(62, 13);
+            this.layoutControlItem4.TextToControlDistance = 10;
             // 
             // CityEditForm
             // 
