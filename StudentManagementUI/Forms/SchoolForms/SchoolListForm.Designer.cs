@@ -203,8 +203,6 @@
             this.IconOptions.ShowIcon = false;
             this.Name = "SchoolListForm";
             this.Text = "School List";
-            this.Load += new System.EventHandler(this.SchoolListForm_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDownOnForm);
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.longNavigator, 0);
             this.Controls.SetChildIndex(this.gridControlSchools, 0);

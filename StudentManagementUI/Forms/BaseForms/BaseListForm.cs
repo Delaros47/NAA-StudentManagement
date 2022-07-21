@@ -66,7 +66,7 @@ namespace StudentManagementUI.Forms.BaseForms
 
         protected virtual void Exit(object sender, ItemClickEventArgs e)
         {
-
+            Close();
         }
 
         protected virtual void ExcelFileStandard(object sender, ItemClickEventArgs e)
