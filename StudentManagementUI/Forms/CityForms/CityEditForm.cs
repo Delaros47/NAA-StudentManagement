@@ -35,7 +35,7 @@ namespace StudentManagementUI.Forms.CityForms
 
         private void GetPrivateCode()
         {
-            CleanAll();
+
             try
             {
                 var result = _cityService.GetLastPrivateCode().Data;
@@ -48,6 +48,8 @@ namespace StudentManagementUI.Forms.CityForms
 
 
         }
+
+        
 
         protected override void Save(object sender, ItemClickEventArgs e)
         {
@@ -78,7 +80,7 @@ namespace StudentManagementUI.Forms.CityForms
         protected override void Update(object sender, ItemClickEventArgs e)
         {
             if (CityId == -1) return;
-            var result = _cityService.Add(new City
+            var result = _cityService.Update(new City
             {
                 Id = CityId,
                 PrivateCode = txtPrivateCode.Text,
@@ -88,7 +90,7 @@ namespace StudentManagementUI.Forms.CityForms
             });
             if (result.Success)
             {
-                MyMessageBox.AddMessage(result.Message);
+                MyMessageBox.UpdateMessage(result.Message);
             }
             else
             {
@@ -117,6 +119,7 @@ namespace StudentManagementUI.Forms.CityForms
                     txtPrivateCode.Text = result.PrivateCode;
                     txtCityName.Text = result.CityName;
                     txtDescription.Text = result.Description;
+                    tglState.IsOn = result.State;
                 }
             }
             else

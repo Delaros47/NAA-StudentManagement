@@ -559,6 +559,7 @@
             this.Ribbon = this.ribbonControl;
             this.ShowInTaskbar = false;
             this.StatusBar = this.ribbonStatusBar;
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MyKeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

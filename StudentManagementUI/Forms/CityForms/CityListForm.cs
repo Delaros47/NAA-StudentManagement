@@ -3,6 +3,7 @@ using Business.DependencyResolvers.AutoFac;
 using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
 using StudentManagementUI.Common.Functions;
+using StudentManagementUI.Common.Messages;
 using StudentManagementUI.Forms.BaseForms;
 using System;
 using System.Collections.Generic;
@@ -28,6 +29,7 @@ namespace StudentManagementUI.Forms.CityForms
 
         protected override void New(object sender, ItemClickEventArgs e)
         {
+            CityEditForm.CityId = -1;
             CreateForms<CityEditForm>.ShowDialogEditForm();
             GetAll();
         }
@@ -46,13 +48,29 @@ namespace StudentManagementUI.Forms.CityForms
         {
             CityEditForm.CityId = (int)gridViewCities.GetFocusedRowCellValue("Id");
             CreateForms<CityEditForm>.ShowDialogEditForm();
-            GetAll();
+            
         }
 
         protected override void Refresh(object sender, ItemClickEventArgs e)
         {
-            GetAll();
+            
         }
+
+        protected override void ActivePassiveList(object sender, ItemClickEventArgs e)
+        {
+            if (e.Item.Caption == "Passive List")
+            {
+                e.Item.Caption = "Active List";
+                gridControlCities.DataSource = _cityService.GetAllPassive().Data;
+            }
+            else
+            {
+                e.Item.Caption = "Passive List";
+                gridControlCities.DataSource = _cityService.GetAllActive().Data;
+            }
+        }
+
+      
 
         protected override void Filter(object sender, ItemClickEventArgs e)
         {
@@ -129,9 +147,17 @@ namespace StudentManagementUI.Forms.CityForms
 
         private void gridViewCities_DoubleClick(object sender, EventArgs e)
         {
-            CityEditForm.CityId = (int)gridViewCities.GetFocusedRowCellValue("Id");
-            CreateForms<CityEditForm>.ShowDialogEditForm();
-            GetAll();
+            if (gridViewCities.FocusedRowHandle>-1)
+            {
+                CityEditForm.CityId = (int)gridViewCities.GetFocusedRowCellValue("Id");
+                CreateForms<CityEditForm>.ShowDialogEditForm();
+                GetAll();
+            }
+            else
+            {
+                MyMessageBox.NotSelectedRowId();
+            }
+            
         }
     }
 }

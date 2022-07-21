@@ -1,5 +1,6 @@
 ﻿using Business.Abstract;
 using Business.Constants;
+using Business.ValidationRules.FluentValidation;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
@@ -7,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Universal.Utilities.Aspects.Validation;
 using Universal.Utilities.Results.Abstract;
 using Universal.Utilities.Results.Concrete;
 
@@ -20,6 +22,7 @@ namespace Business.Concrete
             _cityDal = cityDal;
         }
 
+        [ValidationAspect(typeof(CityValidator))]
         public IResult Add(City city)
         {
             _cityDal.Add(city);

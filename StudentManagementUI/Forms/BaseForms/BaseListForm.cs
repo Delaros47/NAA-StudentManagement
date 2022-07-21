@@ -103,5 +103,10 @@ namespace StudentManagementUI.Forms.BaseForms
         {
 
         }
+
+        protected virtual void MyKeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
     }
 }
