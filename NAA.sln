@@ -13,8 +13,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Universal", "Universal\Univ
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentManagementUI", "StudentManagementUI\StudentManagementUI.csproj", "{7BE87F25-530C-4DCB-A05D-8819A19098BC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{F1D508D9-8143-4D59-967B-08205C05A45F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,10 +39,6 @@ Global
 		{7BE87F25-530C-4DCB-A05D-8819A19098BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BE87F25-530C-4DCB-A05D-8819A19098BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BE87F25-530C-4DCB-A05D-8819A19098BC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F1D508D9-8143-4D59-967B-08205C05A45F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F1D508D9-8143-4D59-967B-08205C05A45F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F1D508D9-8143-4D59-967B-08205C05A45F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F1D508D9-8143-4D59-967B-08205C05A45F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

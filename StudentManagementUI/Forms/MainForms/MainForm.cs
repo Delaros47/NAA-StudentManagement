@@ -41,12 +41,17 @@ namespace StudentManagementUI.Forms.MainForms
         {
             if (e.Item==btnSchools)
             {
-                CreateForms<SchoolListForm>.ShowDialogListForm();
+                SchoolListForm schoolListForm = new SchoolListForm();
+                schoolListForm.MdiParent = ActiveForm;
+                schoolListForm.Show();
             }
             else if (e.Item==btnCities)
             {
-                CreateForms<CityListForm>.ShowDialogListForm();
+                CityListForm cityListForm = new CityListForm();
+                cityListForm.MdiParent = ActiveForm;
+                cityListForm.Show();
             }
+
         }
     }
 }

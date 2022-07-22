@@ -6,6 +6,7 @@ using Entities.Concrete;
 using StudentManagementUI.Common.Functions;
 using StudentManagementUI.Common.Messages;
 using StudentManagementUI.Forms.BaseForms;
+using StudentManagementUI.Common.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,11 +21,22 @@ namespace StudentManagementUI.Forms.CityForms
 {
     public partial class CityEditForm : BaseEditForm
     {
+        private readonly ICityService _cityService;
         public CityEditForm()
         {
             InitializeComponent();
+            _cityService = InstanceFactory.GetInstance<ICityService>();
+            MyDataLayoutControl = myDataLayoutControl;
+            BaseService = (IBaseService)_cityService;
+            FormType = FormType.School;
+            EventsLoad();
         }
 
-        
+
+        protected override void MyLoads()
+        {
+            
+        }
+
     }
 }

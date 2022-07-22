@@ -38,8 +38,8 @@
             this.statusBarDescription = new DevExpress.XtraBars.BarStaticItem();
             this.statusBarShortcut = new DevExpress.XtraBars.BarStaticItem();
             this.statusBarShortcutDescription = new DevExpress.XtraBars.BarStaticItem();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +64,7 @@
             this.ribbonControl.MaxItemId = 9;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage1});
+            this.ribbonPage});
             this.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl.ShowDisplayOptionsMenuButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.False;
@@ -86,7 +86,6 @@
             this.btnNew.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnNew.ImageOptions.LargeImage")));
             this.btnNew.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Insert));
             this.btnNew.Name = "btnNew";
-            this.btnNew.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.New);
             // 
             // btnSave
             // 
@@ -96,7 +95,6 @@
             this.btnSave.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.LargeImage")));
             this.btnSave.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Save);
             // 
             // btnUpdate
             // 
@@ -106,7 +104,6 @@
             this.btnUpdate.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnUpdate.ImageOptions.LargeImage")));
             this.btnUpdate.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U));
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Update);
             // 
             // btnClear
             // 
@@ -116,7 +113,6 @@
             this.btnClear.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnClear.ImageOptions.LargeImage")));
             this.btnClear.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Delete));
             this.btnClear.Name = "btnClear";
-            this.btnClear.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Clear);
             // 
             // btnExit
             // 
@@ -126,7 +122,6 @@
             this.btnExit.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnExit.ImageOptions.LargeImage")));
             this.btnExit.Name = "btnExit";
             this.btnExit.ShortcutKeyDisplayString = "Esc";
-            this.btnExit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Exit);
             // 
             // statusBarDescription
             // 
@@ -148,22 +143,20 @@
             this.statusBarShortcutDescription.Id = 8;
             this.statusBarShortcutDescription.Name = "statusBarShortcutDescription";
             // 
-            // ribbonPage1
+            // ribbonPage
             // 
-            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1});
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "ribbonPage1";
+            this.ribbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup});
+            this.ribbonPage.Name = "ribbonPage";
             // 
-            // ribbonPageGroup1
+            // ribbonPageGroup
             // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnNew);
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnSave);
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnUpdate);
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnClear);
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnExit);
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
+            this.ribbonPageGroup.ItemLinks.Add(this.btnNew);
+            this.ribbonPageGroup.ItemLinks.Add(this.btnSave);
+            this.ribbonPageGroup.ItemLinks.Add(this.btnUpdate);
+            this.ribbonPageGroup.ItemLinks.Add(this.btnClear);
+            this.ribbonPageGroup.ItemLinks.Add(this.btnExit);
+            this.ribbonPageGroup.Name = "ribbonPageGroup";
             // 
             // ribbonStatusBar
             // 
@@ -188,7 +181,6 @@
             this.Ribbon = this.ribbonControl;
             this.ShowInTaskbar = false;
             this.StatusBar = this.ribbonStatusBar;
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MyKeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -196,8 +188,8 @@
         }
 
         #endregion
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup;
         protected DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl;
         private DevExpress.XtraBars.BarButtonItem btnNew;
         private DevExpress.XtraBars.BarButtonItem btnSave;
