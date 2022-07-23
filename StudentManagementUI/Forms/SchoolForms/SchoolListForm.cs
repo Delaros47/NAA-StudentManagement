@@ -4,7 +4,6 @@ using Business.DependencyResolvers.AutoFac;
 using DataAccess.Concrete.EntityFramework;
 using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
-using StudentManagementUI.Common.Functions;
 using StudentManagementUI.Forms.BaseForms;
 using System;
 using System.Collections.Generic;

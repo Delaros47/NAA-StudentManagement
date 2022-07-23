@@ -16,4 +16,9 @@
     <ProjectReference Include="..\Business\Business.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Common\Enums\" />
+    <Folder Include="Common\Show\Abstract\" />
+  </ItemGroup>
+
 </Project>

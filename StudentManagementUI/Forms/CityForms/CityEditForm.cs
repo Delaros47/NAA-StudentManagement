@@ -3,10 +3,8 @@ using Business.DependencyResolvers.AutoFac;
 using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
 using Entities.Concrete;
-using StudentManagementUI.Common.Functions;
 using StudentManagementUI.Common.Messages;
 using StudentManagementUI.Forms.BaseForms;
-using StudentManagementUI.Common.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,21 +19,16 @@ namespace StudentManagementUI.Forms.CityForms
 {
     public partial class CityEditForm : BaseEditForm
     {
+        #region Comment
+        /*
+         * Here in order to reach events on BaseEditForm we have send to our DataLayoutControl there
+         */
+        #endregion
         private readonly ICityService _cityService;
         public CityEditForm()
         {
             InitializeComponent();
             _cityService = InstanceFactory.GetInstance<ICityService>();
-            MyDataLayoutControl = myDataLayoutControl;
-            BaseService = (IBaseService)_cityService;
-            FormType = FormType.School;
-            EventsLoad();
-        }
-
-
-        protected override void MyLoads()
-        {
-            
         }
 
     }
